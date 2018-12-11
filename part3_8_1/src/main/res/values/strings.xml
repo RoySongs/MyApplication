@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">part3_8_1</string>
+    <string name="title_activity_read_db">ReadDBActivity</string>
+</resources>
