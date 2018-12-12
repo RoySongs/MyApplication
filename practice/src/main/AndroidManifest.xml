@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".ActivityLab1"
+            android:label="@string/title_activity_lab1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityLab2_LinearLayout"
+            android:label="@string/title_activity_lab2__linear_layout"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,8 +25,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityLab1"
-            android:label="@string/title_activity_lab1"
+            android:name=".ActivityLab2_RelativeLayout"
+            android:label="@string/title_activity_lab2__relative_layout"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

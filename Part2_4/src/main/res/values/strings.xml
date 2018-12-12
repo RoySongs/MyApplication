@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="user_name">홍길동</string>
+    <string name="user_content">안녕하세요 잘 지내시는 지요?</string>
+    <string name="user_date">17.1.26</string>
+</resources>
