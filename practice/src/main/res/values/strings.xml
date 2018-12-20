@@ -7,5 +7,7 @@
     <string name="move">이동</string>
     <string name="title_activity_lab2__linear_layout">ActivityLab2_LinearLayout</string>
     <string name="title_activity_lab2__relative_layout">ActivityLab2_RelativeLayout</string>
+    <string name="title_activity_lab2">ActivityLab2</string>
+    <string name="title_activity_practice1">Practice1</string>
 
 </resources>

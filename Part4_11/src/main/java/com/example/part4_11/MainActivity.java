@@ -2,9 +2,9 @@ package com.example.part4_11;
 
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -13,8 +13,6 @@ import android.text.style.ImageSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
             RelativeSizeSpan sizeSpan = new RelativeSizeSpan(2.0f);
             // end에 +2를 해줬는데 의미는? 바뀐게 없다. 대신 +10을 주니 하이트가 늘어남.
             // SPAN INCLUSIVE와 EXCLUSIVE 차이는?
-            // builder.insert(17, "CCCCC")가 추가되고 INVLUSIVE 방향이면 똑같은 효과가 추가된다.
             builder.setSpan(styleSpan,start,end+2, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
             builder.setSpan(sizeSpan,start,end+2, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+            builder.insert(17, "CCCCC");
         }
         spanView.setText(builder);
 

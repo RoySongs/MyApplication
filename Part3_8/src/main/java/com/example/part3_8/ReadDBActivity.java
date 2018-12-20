@@ -1,7 +1,7 @@
 package com.example.part3_8;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class ReadDBActivity extends AppCompatActivity {
 

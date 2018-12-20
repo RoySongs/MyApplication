@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img"/>
+<!-- scaleType에서 center는 그냥 중앙에 이미지 크기인채로 나오는 것 같고, centerCrop은 화면크기에 이미지가 맞춰져서 예쁘게 나온다.-->
+</LinearLayout>

@@ -1,10 +1,7 @@
 package com.example.part4_11;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -93,6 +90,7 @@ public class Lab11_2Activity extends AppCompatActivity implements View.OnClickLi
         public boolean onJsAlert(WebView view, String url, String message, JsResult result){
             Toast t = Toast.makeText(Lab11_2Activity.this, message, Toast.LENGTH_SHORT);
             t.show();
+
             result.confirm();
             return true;
         }

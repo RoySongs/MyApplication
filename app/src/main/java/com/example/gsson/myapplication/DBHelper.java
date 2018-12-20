@@ -1,5 +1,7 @@
 package com.example.gsson.myapplication;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
@@ -15,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "content)";
         db.exeSQL(memoSQL);
     }
-    public void onUpgrade(SQLiteDatabase db, int )
+
 }
 
 
