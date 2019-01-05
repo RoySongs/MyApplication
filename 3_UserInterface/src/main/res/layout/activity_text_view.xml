@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가나다라 http://www.naver.com 마바사 a@a.com 123-4567"
+        android:autoLink="web|email|phone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/long_text"
+        android:maxLines="3"
+        android:ellipsize="end"
+        />
+
+    <TextView
+        android:id="@+id/fontView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="custom font"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:adjustViewBounds="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="@string/inputPhone"/>
+
+    <CheckBox
+        android:id="@+id/isCheckedId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checkText"/>
+
+
+</LinearLayout>

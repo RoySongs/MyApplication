@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_linear_lay">LinearLayActivity</string>
+    <string name="firstText">홍길동</string>
+    <string name="secText">안녕하세요 잘지내시는지요?</string>
+    <string name="date">2019.1.1</string>
+</resources>
