@@ -9,20 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/17_SupportLibrary" />
+            <option value="$PROJECT_DIR$/18_MaterialDesign" />
             <option value="$PROJECT_DIR$/3_UserInterface" />
             <option value="$PROJECT_DIR$/4_Layout" />
-            <option value="$PROJECT_DIR$/Part2_4" />
-            <option value="$PROJECT_DIR$/Part3_8" />
-            <option value="$PROJECT_DIR$/Part4_11" />
-            <option value="$PROJECT_DIR$/Part4_11_1" />
-            <option value="$PROJECT_DIR$/Part4_12" />
-            <option value="$PROJECT_DIR$/Part4_12_1" />
-            <option value="$PROJECT_DIR$/Part4_13" />
-            <option value="$PROJECT_DIR$/Part5_1" />
-            <option value="$PROJECT_DIR$/Part6_17" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/part3_8_1" />
-            <option value="$PROJECT_DIR$/practice" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

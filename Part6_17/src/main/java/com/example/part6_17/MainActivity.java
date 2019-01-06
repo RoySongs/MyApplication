@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         oneFragment = new OneFragment();
         twoFragment = new TwoFragment();
         threeFragment = new ThreeFragment();
-        linkInfoFragment = new LinkInfoFragment();
 
         FragmentTransaction ft = manager.beginTransaction();
         ft.addToBackStack(null);
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(!oneFragment.isVisible()){
                 FragmentTransaction ft=manager.beginTransaction();
                 ft.addToBackStack(null);
-                ft.replace(R.id.main_container, twoFragment);
+                ft.replace(R.id.main_container, oneFragment);
                 ft.commit();
             }
         }else if(v==btn2){
