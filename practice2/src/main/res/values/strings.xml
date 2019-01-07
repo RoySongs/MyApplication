@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">My Application</string>
-    <string name="title_activity_recy_view">recyView</string>
-    <string name="word1">안녕하세요</string>
-    <string name="word2">hellolo</string>
-    <string name="title_activity_lab1">Activity_lab1</string>
-</resources>
-

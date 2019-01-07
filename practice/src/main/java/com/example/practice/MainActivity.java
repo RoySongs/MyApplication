@@ -1,47 +1,64 @@
 package com.example.practice;
 
-import android.content.Intent;
-import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+/**
+ * Created by kkang
+ * 깡샘의 안드로이드 프로그래밍 - 루비페이퍼
+ * 위의 교제에 담겨져 있는 코드로 설명 및 활용 방법은 교제를 확인해 주세요.
+ */
+public class MainActivity extends AppCompatActivity {
 
-    Button btnValue1, btnValue2, btnValue3, btnValue4;
-    TextView txtView1;
+    DrawerLayout drawer;
+    ActionBarDrawerToggle toggle;
+    boolean isDrawerOpend;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnValue1 = (Button)findViewById(R.id.btn1);
-        btnValue2 = (Button)findViewById(R.id.btn2);
-        btnValue3 = (Button)findViewById(R.id.btn3);
-        btnValue4 = (Button)findViewById(R.id.btn4);
-        txtView1 = (TextView)findViewById(R.id.invisibleL);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        drawer=(DrawerLayout)findViewById(R.id.main_drawer);
+        toggle=new ActionBarDrawerToggle(this, drawer, R.string.drawer_open, R.string.drawer_close);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toggle.syncState();
 
-
-        btnValue1.setOnClickListener(this);
-        btnValue2.setOnClickListener(this);
-        btnValue3.setOnClickListener(this);
-        btnValue4.setOnClickListener(this);
-
+        NavigationView navigationView=(NavigationView)findViewById(R.id.main_drawer_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id=item.getItemId();
+                if(id==R.id.menu_drawer_home){
+                    showToast("NavigationDrawer... home...");
+                }else if(id==R.id.menu_drawer_message){
+                    showToast("NavigationDrawer... message...");
+                }else if(id==R.id.menu_drawer_add){
+                    showToast("NavigationDrawer... add...");
+                }
+                return false;
+            }
+        });
     }
+
     @Override
-    public void onClick(View v){
-        if(btnValue1 == v){
-            txtView1.setVisibility(View.VISIBLE);
-        } else if(btnValue2 == v){
-            txtView1.setVisibility(View.INVISIBLE);
-        } else if(btnValue3 == v){
-            txtView1.setVisibility(View.GONE);
-        } else if(btnValue4 == v){
-            Intent intent = new Intent(this, ActivityLab1.class);
-            startActivity(intent);
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(toggle.onOptionsItemSelected(item)){
+            return false;
         }
+        return super.onOptionsItemSelected(item);
     }
 
+    private void showToast(String message){
+        Toast toast=Toast.makeText(this, message, Toast.LENGTH_SHORT);
+        toast.show();
+    }
 }

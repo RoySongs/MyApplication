@@ -1,13 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="title_activity_lab1">ActivityLab1</string>
-    <string name="firstLayout">첫 번째 레이아웃</string>
-    <string name="secoundLayout">두 번째 레이아웃</string>
-    <string name="checkView">보입니당</string>
-    <string name="move">이동</string>
-    <string name="title_activity_lab2__linear_layout">ActivityLab2_LinearLayout</string>
-    <string name="title_activity_lab2__relative_layout">ActivityLab2_RelativeLayout</string>
-    <string name="title_activity_lab2">ActivityLab2</string>
-    <string name="title_activity_practice1">Practice1</string>
-
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>
