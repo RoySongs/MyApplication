@@ -1,6 +1,10 @@
 package com.example.a18_materialdesign;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.util.Log;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -11,12 +15,27 @@ import android.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     boolean bLog = false; // false : 로그아웃 상태
-
+    ActionBarDrawerToggle toggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        DrawerLayout drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout,R.string.Open_ActionBar, R.string.Close_ActionBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                return false;
+            }
+        });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         //Inflate the menu; this adds items to the action bar if it is present.
@@ -48,21 +67,32 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a prent activity in AndroidManifest.xml.
         Log.d("test", "onOptionsItemSelected = 메뉴 항목을 클랙했을 때 호출");
+        if(toggle.onOptionsItemSelected(item)){
+            return false;
+        }
 
         int id = item.getItemId();
 
         switch(id) {
             case R.id.menu_login:
-                Toast.makeText(getApplicationContext(), "로그인 메뉴 클릭", Toast.LENGTH_SHORT).show();
+                showToast("로그인 메뉴 클릭");
                 return true;
             case R.id.menu_logout:
-                Toast.makeText(getApplicationContext(), "로그아웃 메뉴 클릭", Toast.LENGTH_SHORT).show();
+                showToast("로그아웃 메뉴 클릭");
                 return true;
             case R.id.menu_next:
-                Toast.makeText(getApplicationContext(), "다음", Toast.LENGTH_SHORT).show();
+                showToast("다음");
+                return true;
+            case R.id.nav_camera:
+                showToast("카메라");
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void showToast(String msg){
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
 

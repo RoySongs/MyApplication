@@ -9,10 +9,21 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include
-        layout="@layout/app_bar_main"
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/mission2_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Navigation View Test"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:gravity="center"/>
+    </RelativeLayout>
+
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
