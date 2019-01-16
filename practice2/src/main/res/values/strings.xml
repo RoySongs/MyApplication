@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_one_fragment">oneFragment</string>
+    <string name="title_activity_two_fragment">TwoFragment</string>
+    <string name="title_activity_three_fragment">ThreeFragment</string>
+    <string name="button1">button1</string>
+    <string name="button2">button2</string>
+    <string name="button3">button3</string>
+    <string name="oneFragment_text">oneFragment_text</string>
+    <string name="title_activity_view_pager__one_fragment">ViewPager_OneFragment</string>
+    <string name="title_activity_view_pager__two_fragment">ViewPager_TwoFragment</string>
+</resources>

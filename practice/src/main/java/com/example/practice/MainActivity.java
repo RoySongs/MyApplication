@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         toggle=new ActionBarDrawerToggle(this, drawer, R.string.drawer_open, R.string.drawer_close);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toggle.syncState();
+        drawer.addDrawerListener(toggle);
 
         NavigationView navigationView=(NavigationView)findViewById(R.id.main_drawer_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

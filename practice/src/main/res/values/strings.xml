@@ -2,4 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_lab18_2">Lab18_2Activity</string>
+    <string name="title_activity_lab18_3">Lab18_3Activity</string>
+    <string name="title_activity_test4">test4</string>
 </resources>
